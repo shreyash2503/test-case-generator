@@ -1,0 +1,46 @@
+Software Requirements Specification
+Project Name: Online Bookstore System
+
+1. Introduction
+The Online Bookstore System aims to provide an online platform for users to browse, search, and purchase books. It will offer a wide range of books across various genres and categories.
+
+2. Scope
+The system will include features such as user registration, browsing books, searching for books by title or author, adding books to a shopping cart, and placing orders. It will also have an administration interface for managing books, users, and orders.
+
+3. Functional Requirements
+3.1 User Registration
+- The system shall allow users to register for an account by providing their email address and creating a password.
+- Upon successful registration, the system shall send a confirmation email to the user.
+
+3.2 Browsing Books
+- Users shall be able to browse books by category or genre.
+- Each book shall be displayed with its title, author, price, and cover image.
+
+3.3 Searching for Books
+- Users shall be able to search for books by title or author using a search bar.
+- The search results shall be displayed in real-time as the user types.
+
+3.4 Adding Books to Cart
+- Users shall be able to add books to a shopping cart.
+- The system shall display the current contents of the shopping cart, including the total price.
+
+3.5 Placing Orders
+- Users shall be able to place orders for books in their shopping cart.
+- The system shall generate an order confirmation and send it to the user's email address.
+
+4. Non-functional Requirements
+4.1 Performance
+- The system shall be able to handle concurrent user sessions without significant degradation in performance.
+- The response time for browsing books and adding items to the shopping cart shall be less than 2 seconds.
+
+4.2 Security
+- User passwords shall be securely hashed and stored in the database.
+- User sessions shall be encrypted using HTTPS to ensure data privacy during transmission.
+
+5. Glossary
+- User: An individual who interacts with the Online Bookstore System by browsing, searching, and purchasing books.
+- Administrator: A privileged user with access to the administration interface for managing books, users, and orders.
+
+6. Appendices
+- Appendix A: Use Case Diagram
+- Appendix B: Entity-Relationship Diagram
