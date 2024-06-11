@@ -1,6 +1,5 @@
 #####
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
-# from langchain_groq import ChatGroq
 import google.generativeai as genai
 from langchain_community.vectorstores.faiss import FAISS
 from langchain.chains import create_retrieval_chain
@@ -15,7 +14,6 @@ from pydantic import BaseModel
 import os
 from dotenv import load_dotenv
 
-# Setting Google API Key
 load_dotenv()
 os.getenv("GOOGLE_API_KEY")
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
@@ -24,7 +22,6 @@ DB_FAISS_PATH = 'vectorstore/db_faiss'
 
 chat_history=[]
 
-#Loading the model
 def load_llm():
     llm = ChatGoogleGenerativeAI(model="gemini-1.5-pro-latest", temperature=1, max_output_tokens=1000)
     return llm
@@ -47,7 +44,6 @@ def history_aware_retriever(retriever, llm):
     
     return history_aware_retriever
 
-# Setting QA chain
 def get_conversational_chain(history_aware_retriever, llm):
     use_case_system_prompt = """You are an assistant designed to help generate use cases from Software Requirements Specifications (SRS) documents. 
     Use the following pieces of context to create detailed and comprehensive use cases based on the information provided in the SRS document. 
@@ -68,7 +64,6 @@ def get_conversational_chain(history_aware_retriever, llm):
     
     return rag_chain
 
-# Function to process SRS document and generate use cases
 def generate_use_cases(srs_document):
     print(srs_document)
     user_question = "Generate use cases from the following SRS document."
