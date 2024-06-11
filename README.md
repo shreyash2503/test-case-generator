@@ -30,7 +30,7 @@ This project aims to facilitate the automatic generation of detailed and compreh
 - FastAPI
 - Uvicorn
 - Python-dotenv
-- Google Generative AI API key
+- Google Gemini API key
 
 ## Installation
 
